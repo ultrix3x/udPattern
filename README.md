@@ -1,6 +1,6 @@
 #udPattern
 
-Quick documentaation
+Quick documentation
 
 ##TestPattern($check, $easyTest, $delimiter)
 Test a pattern against the registered patterns in the object.
