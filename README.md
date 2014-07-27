@@ -51,28 +51,28 @@ The validation of a pattern is made in the added order. First added is first che
 If you use the Add function then the added pattern vill be tested against previously added patterns. If the new pattern is redundant then it will not be added.
 
 #Patterns
-* * can be matched against any string
+* \* can be matched against any string
 * % can be matched against any string that doesn't contain the delimiter used
 * ? can be matched against one character that isn't equal to the delimiter
 
-* patterns that starts with *.zzz.zzz match zzz.zzz
+* patterns that starts with \*.zzz.zzz match zzz.zzz
 * patterns that starts with %.zzz.zzz doesn't match zzz.zzz
-* patterns like zzz*.zzz match zzzzz.zzz and zzz.zzz.zzz
+* patterns like zzz\*.zzz match zzzzz.zzz and zzz.zzz.zzz
 * patterns like zzz%.zzz match zzzzz.zzz but not zzz.zzz.zzz
-* patterns like *%.zzz.zzz match zzz.zzz.zzz and zzz.zzz.zzz.zzz 
+* patterns like \*%.zzz.zzz match zzz.zzz.zzz and zzz.zzz.zzz.zzz 
                                and .zzz.zzz but not zzz.zzz
-* patterns like *?.zzz.zzz match zzz.zzz.zzz and zzz.zzz.zzz.zzz 
+* patterns like \*?.zzz.zzz match zzz.zzz.zzz and zzz.zzz.zzz.zzz 
                                but not .zzz.zzz and zzz.zzz
 
 #Cleaning
-* ** is redundant and replaced with *
+* \*\* is redundant and replaced with \*
 * %% is redundant and replaced with %
-* .*.* is redundant and replaced with .*
-* *.*. is redundant and replaced with *.
+* .\*.\* is redundant and replaced with .\*
+* \*.\*. is redundant and replaced with \*.
 
-* ?* is reordered to *?
+* ?\* is reordered to \*?
 * ?% is reordered to %?
-* %* is reordered to *%
+* %\* is reordered to \*%
 
 
 Note! In the sections Patterns and Cleaning the default $delimiter (.) is used.
